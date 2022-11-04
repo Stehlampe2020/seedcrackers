@@ -5,7 +5,7 @@ import random
 
 def test(seed, nums=(1, 2, 3)): # Some example numbers as default in nums
     random.seed(seed)
-    if [random.randint(0, 99) for i in range(len(nums))] == nums: # Use list comprehension to generate the numbers and check them against the expected numbers.
+    if [random.randint(0, 99) for i in range(len(nums))] == list(nums): # Use list comprehension to generate the numbers and check them against the expected numbers.
         return seed # Return the seed if they match and
     return None # return nothing (None) if they don't match.
 
