@@ -10,7 +10,9 @@ def test(seed, nums=(1, 2, 3)): # Some example numbers as default in nums
     return None # return nothing (None) if they don't match.
 
 numbers = (13, 37, 42) # The tuple here is the numbers that the code checks for in all seeds.
+print(f'Searching for seeds that generate {numbers}...')
 for i in range(0xffffff):
     t = test(i, numbers)
     if t:
         print(f'Possible seed: {t}')
+
